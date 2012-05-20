@@ -1,11 +1,10 @@
 package model;
 
+public class Noticia {
+    protected String titulo;
+    protected String descricao;
 
-public class Conteudo {
-    private String titulo;
-    private String descricao;
-
-    public Conteudo(String titulo, String descricao) {
+    public Noticia(String titulo, String descricao) {
         this.titulo = titulo;
         this.descricao = descricao;
     }

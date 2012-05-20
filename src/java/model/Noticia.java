@@ -11,7 +11,15 @@ public class Noticia {
 
     
     public String getDescricao() {
-        return descricao;
+        int tamanhoTexto = this.descricao.length();
+        String textoCortado = "";
+        if(tamanhoTexto < 40){
+            textoCortado = this.descricao.substring(0, tamanhoTexto);
+        } else {
+            textoCortado = this.descricao.substring(0, 40);
+        }
+            
+        return textoCortado+"...";
     }
 
     public void setDescricao(String descricao) {

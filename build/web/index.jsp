@@ -7,10 +7,10 @@
 
     <div class="container">
         <jsp:include page="includes/bloco_topo.jsp">
-            <jsp:param name="titulo" value="Principal" />
+            <jsp:param name="titulo" value="Página Principal" />
         </jsp:include>
         
-      <jsp:include page="includes/bloco_noticias.jsp" />
+      <jsp:include page="includes/bloco_home.jsp" />
       <jsp:include page="includes/bloco_destaques.jsp" />
     </div>
     

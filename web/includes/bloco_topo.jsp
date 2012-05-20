@@ -1,6 +1,7 @@
 
 <div class="row">
     <h1 class="page-header">
+        Meu Site de Notícias - 
         <%
             out.print( request.getParameter("titulo") );
         %>
@@ -11,9 +12,9 @@
     <div class="span6">
             <div class="btn-group meu-grupo-botoes">
                     <a href="index.jsp" class="btn">Home</a>
-                    <a href="#" class="btn btn-danger">Notícias</a>
+                    <a href="noticias.jsp" class="btn btn-danger">Notícias</a>
                     <a href="esportes.jsp" class="btn btn-success">Esportes</a>
-                    <a href="#" class="btn btn-warning">Entretenimento</a>
+                    <a href="entretenimento.jsp" class="btn btn-warning">Entretenimento</a>
             </div> 
     </div> 
     <div class="span2 offset4">

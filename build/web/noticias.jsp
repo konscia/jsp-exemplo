@@ -7,9 +7,9 @@
 
     <div class="container">
       <jsp:include page="includes/bloco_topo.jsp">
-          <jsp:param name="titulo" value="Esportes" />
+          <jsp:param name="titulo" value="Notícias" />
       </jsp:include>	   	 
-      <jsp:include page="includes/bloco_esportes.jsp" />
+      <jsp:include page="includes/bloco_noticias.jsp" />
       <jsp:include page="includes/bloco_destaques.jsp" />
     </div>
     
