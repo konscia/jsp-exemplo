@@ -2,17 +2,26 @@ package dao;
 
 import java.util.ArrayList;
 import model.Noticia;
+import util.*;
 
 public class NoticiasDAO {
 
     public static ArrayList<Noticia> listaHome(){        
         ArrayList<Noticia> lista = new ArrayList<Noticia>();
         
-        lista.add( new Noticia("Especial", "Descrição mais longa de um texto que será cortado em um determinado caracter.") );
-        lista.add( new Noticia("Especial Esporte", "Descrição") );
-        lista.add( new Noticia("Fofoca Super Nova", "Descrição") );
-        lista.add( new Noticia("Economia Nacional", "Descrição") );
-        
+        MySQL bancoDados = new MySQL();
+        String sql = "select * from noticias"; //Cria consulta para pegar todas as notícias do banco
+        ConjuntoResultados linhas = bancoDados.executaSelect(sql); //Pega conjunto de linhas retornadas 
+        //Para cada linha retornado, 
+            //cria um objeto Modelo
+            //E preenche seus atributos com o valor de cada coluna
+        while(linhas.next()){
+            Noticia n = new Noticia();
+            n.setTitulo( linhas.getString("titulo") );
+            n.setDescricao( linhas.getString("descricao") );
+            
+            lista.add(n);
+        }
         return lista;        
     }
     

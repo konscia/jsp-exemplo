@@ -4,6 +4,10 @@ public class Noticia {
     protected String titulo;
     protected String descricao;
 
+    public Noticia() {
+    
+    }
+    
     public Noticia(String titulo, String descricao) {
         this.titulo = titulo;
         this.descricao = descricao;
